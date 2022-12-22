@@ -1,0 +1,7 @@
+micronaut:
+  application:
+    name: medical-service
+netty:
+  default:
+    allocator:
+      max-order: 3
