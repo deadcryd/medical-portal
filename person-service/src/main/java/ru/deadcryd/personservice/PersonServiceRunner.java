@@ -1,4 +1,4 @@
-package ru.deadcryd.person;
+package ru.deadcryd.personservice;
 
 import io.micronaut.runtime.Micronaut;
 
