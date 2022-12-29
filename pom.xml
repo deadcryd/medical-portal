@@ -115,6 +115,11 @@
         <configuration>
           <annotationProcessorPaths combine.children="append">
             <path>
+              <groupId>io.micronaut.data</groupId>
+              <artifactId>micronaut-data-hibernate-jpa</artifactId>
+              <version>3.9.2</version>
+            </path>
+            <path>
               <!-- обязательно должен стоять перед mapstruct иначе маппинг будет пустой -->
               <groupId>org.projectlombok</groupId>
               <artifactId>lombok</artifactId>

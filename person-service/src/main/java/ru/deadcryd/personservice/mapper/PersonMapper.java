@@ -3,7 +3,6 @@ package ru.deadcryd.personservice.mapper;
 import jakarta.inject.Inject;
 import java.util.List;
 import java.util.function.Function;
-import org.hibernate.Hibernate;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import ru.deadcryd.personservice.dto.PersonDto;
@@ -35,8 +34,6 @@ public abstract class PersonMapper {
     @Mapping(target = "addresses",
         expression = "java(mapList(person.getAddresses(), addressMapper::addressToAddressDto))")
     public abstract PersonDto personToPersonDto(Person person);
-
-
 
     public <T,R> List<R> mapList(List<T> objects, Function<T, R> mapper) {
         return objects

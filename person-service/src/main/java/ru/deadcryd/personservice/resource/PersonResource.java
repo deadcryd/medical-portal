@@ -3,6 +3,7 @@ package ru.deadcryd.personservice.resource;
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
+import io.micronaut.http.annotation.Delete;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.Post;
@@ -39,7 +40,7 @@ public class PersonResource {
     public List<PersonDto> getAllPersons(
         @Nullable @QueryValue String region
     ) {
-        return personService.findAllPerson();
+        return personService.findAllPerson(region);
     }
 
     @Get("/{id}")
@@ -47,11 +48,8 @@ public class PersonResource {
         return personService.findPerson(id);
     }
 
-    @Get("/verify{?name,passport}")
-    public String verifyPerson(
-        @Nullable @QueryValue String name,
-        @Nullable @QueryValue String passport
-    ) {
-        return "";
+    @Delete("/{id}")
+    public void deletePerson(@PathVariable Long id) {
+        personService.deletePerson(id);
     }
 }
