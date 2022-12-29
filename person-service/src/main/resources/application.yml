@@ -5,3 +5,25 @@ netty:
   default:
     allocator:
       max-order: 3
+
+datasources:
+  default:
+    url: ${JDBC_URL:`jdbc:h2:mem:default;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE`}
+    username: ${JDBC_USER:user}
+    password: ${JDBC_PASSWORD:"password"}
+    driverClassName: ${JDBC_DRIVER:org.h2.Driver}
+
+jpa:
+  default:
+    entity-scan:
+      packages:
+        - ru.deadcryd.personservice.entity
+    properties:
+      hibernate:
+        stat: debug
+        sql: debug
+        type:
+          descriptor:
+            sql: trace
+        hbm2ddl:
+          auto: update # Обновляет схему в бд (надо потом убрать и заменить на ликвибейз)
