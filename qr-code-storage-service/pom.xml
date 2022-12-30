@@ -3,18 +3,16 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <groupId>ru.deadcryd</groupId>
     <artifactId>medical-portal</artifactId>
     <version>0.1</version>
   </parent>
 
-  <artifactId>medical-service</artifactId>
-  <packaging>jar</packaging>
+  <artifactId>qr-code-storage-service</artifactId>
 
   <properties>
-    <exec.mainClass>ru.deadcryd.medical.MedicalServiceRunner</exec.mainClass>
+    <exec.mainClass>ru.deadcryd.storageservice.QrCodeStorageServiceRunner</exec.mainClass>
   </properties>
 
   <dependencies>
@@ -23,4 +21,5 @@
       <artifactId>micronaut-discovery-client</artifactId>
     </dependency>
   </dependencies>
+
 </project>
