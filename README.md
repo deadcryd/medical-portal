@@ -1,14 +1,13 @@
-## Micronaut 3.7.5 Documentation
+# Локальный запуск
+### Установка и запуск Consul
 
-- [User Guide](https://docs.micronaut.io/3.7.5/guide/index.html)
-- [API Reference](https://docs.micronaut.io/3.7.5/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/3.7.5/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
+![img.png](resources/img.png)
 
----
-
-## Feature http-client documentation
-
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
+```shell
+wsl docker pull consul
+```
+```shell
+wsl docker run -p 8500:8500 consul
+```
 
 

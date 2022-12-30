@@ -1,8 +1,8 @@
 micronaut:
   application:
-    name: medical-service
+    name: qr-code-storage-service
   server:
-    port: 8082
+    port: 8083
 consul:
   client:
     registration:
